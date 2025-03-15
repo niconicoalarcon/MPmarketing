@@ -1,0 +1,110 @@
+/* src/styles/Navbar.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+.navbar {
+  font-family: "Lato", serif;
+  font-weight: 900;
+  font-style: normal;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f2e9d0;
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Contenedor del logo */
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  height: 35px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Contenedor de los enlaces de navegación */
+.navLinks {
+  flex: 1; /* Permite que los enlaces ocupen más espacio */
+  display: flex;
+  justify-content: center; /* Centra el menú horizontalmente */
+  gap: 25px;
+  margin-left: auto; /* Para empujarlo hacia el centro */
+  margin-right: auto;
+}
+
+/* Estilos de los links */
+.link {
+  text-decoration: none;
+  color: #16404e;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #f5b462;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.link:hover {
+  color: #f5b462;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+/* Estilo activo */
+.link.active {
+  color: #f5b462;
+  font-weight: bold;
+}
+
+/* Responsive: Móvil */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 15px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .navLinks {
+    display: flex;
+    justify-content: center; /* Asegura que el menú siga centrado */
+    gap: 15px;
+    flex: 1;
+  }
+
+  .link {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+}

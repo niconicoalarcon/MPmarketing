@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* Estilos Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", serif;
+    font-weight: 900;
+    font-style: normal;
+    background-color: #17414f; /* Fondo negro */
+    color: white;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Estilos del Header */
+header {
+    background-color: #a74949; /* Color principal */
+    padding: 30px 20px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    border-radius: 50px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+
+
+/* Contenedor de las Cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 30px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Estilos de las Cards */
+.card {
+    background-color: #f1e9d0; /* Fondo gris oscuro para las tarjetas */
+    border-radius: 22px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #556b2f; /* Borde rosa flúor debajo de la imagen */
+}
+
+/* Estilo para los botones */
+.card .button {
+    display: inline-block;
+    background-color: #556b2f; /* Rosa flúor */
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.card .button:hover {
+    background-color: #a6cec6; /* Color verde suave al hacer hover */
+    transform: translateY(-2px);
+}
+/* Estilo para el botón de "Volver Atrás" */
+.back-button {
+    display: inline-block;
+    background-color: #556b2f; /* Rosa flúor */
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #3F9F9B; /* Color verde suave al hacer hover */
+    transform: translateY(-2px);
+}
+
+
+/* Estilos Responsive */
+
+/* Responsive para tablet y móvil */
+@media screen and (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablets */
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+
