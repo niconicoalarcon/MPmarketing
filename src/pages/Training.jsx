@@ -1,37 +1,38 @@
-import  "./Training.css";
+import "./Training.css";
+import { Link } from "react-router-dom";
+
 function Training() {
-    return (
-      <div>
-  <header>
+  return (
+    <div>
+      <header>
         <h1>Capacitaciones disponibles</h1>
-    </header>
+      </header>
 
-    <section className="cards-container">
+      <section className="cards-container">
         <div className="card">
-            <img src="img_cursos/1.png" alt="Propuesta 1"/>
-            <a href="https://forms.gle/T8aBVCrU2cs3P5Lk6" target="_blanck" className="button">Inscribirme</a>
+          <img src="/img_cursos/1.png" alt="Propuesta 1" />
+          <Link to="/form/1" className="button">Inscribirme</Link>
         </div>
 
-        <div class="card">
-            <img src="img_cursos/2.png" alt="Propuesta 2"/>
-            <a href="https://forms.gle/pEMf7UR6e3myfJW49" target="_blank" className="button">Inscribirme</a>
+        <div className="card">
+          <img src="/img_cursos/2.png" alt="Propuesta 2" />
+          <Link to="/form/2" className="button">Inscribirme</Link>
         </div>
 
-        <div class="card">
-            <img src="img_cursos/3.png" alt="Propuesta 3"/>
-            <a href="https://forms.gle/Kbh7NUZPYFff8euB7" target="_blank" className="button">Inscribirme</a>
+        <div className="card">
+          <img src="/img_cursos/3.png" alt="Propuesta 3" />
+          <Link to="/form/3" className="button">Inscribirme</Link>
         </div>
 
-        <div class="card">
-            <img src="img_cursos/4.png" alt="Propuesta 4"/>
-            <a href="https://forms.gle/KS7zxVW4WQNVFw5g6" target="_blank" className="button">Inscribirme</a>
+        <div className="card">
+          <img src="/img_cursos/4.png" alt="Propuesta 4" />
+          <Link to="/form/4" className="button">Inscribirme</Link>
         </div>
+      </section>
 
-    </section>
-       <a href="/index.html" class="back-button">Volver Atrás</a>
-      </div>
-    );
-  }
-  
-  export default Training;
-  
+      <Link to="/" className="back-button">Volver Atrás</Link>
+    </div>
+  );
+}
+
+export default Training;
