@@ -10,16 +10,22 @@ function Form() {
   // Estados para manejar el formulario
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    apellido:"",
+    nacimiento:"",
+    dni:"",
+    telefono: "",
+    direccion:"",
+    localidad:"",
+    contac_emergency:"",
     message: "",
   });
 
   // Datos de los cursos con enlaces de pago
   const cursos = {
-    1: { nombre: "Community Manager", descripcion: "Comienza el 7 de abril", pago: "https://www.mercadopago.com/curso-community" },
-    2: { nombre: "Redes sociales para emprendedores", descripcion: "Comienza el 10 de mayo", pago: "https://www.mercadopago.com/curso-redes" },
-    3: { nombre: "Planificar tu contenido", descripcion: "Encuentros 8 y 15 de abril", pago: "https://www.mercadopago.com/curso-contenido" },
-    4: { nombre: "Canva y Capcut", descripcion: "Próximamente", pago: "https://www.mercadopago.com/curso-canva" },
+    1: { nombre: "Community Manager", descripcion: "Comienza el 7 de abril", pago: "https://mpago.li/1CZvf5e" },
+    2: { nombre: "Redes sociales para emprendedores", descripcion: "Comienza el 10 de mayo", pago: "https://mpago.la/2VeQXz9" },
+    3: { nombre: "Planificar tu contenido", descripcion: "Encuentros 8 y 15 de abril", pago: "https://mpago.li/2GzHY2k" },
+    4: { nombre: "Canva y Capcut", descripcion: "Próximamente", pago: "" },
   };
 
   // Validar si el ID existe en los cursos
@@ -38,14 +44,20 @@ function Form() {
       // Guardar datos en Firestore
       await addDoc(collection(db, "inscripciones"), {
         nombre: formData.name,
-        email: formData.email,
+        apelido: formData.apellido,
+        nacimiento: formData.nacimiento,
+        dni: formData.dni,
+        telefono: formData.telefono,
+        direccion: formData.direccion,
+        localidad: formData.localidad,
+        contact_emergency: formData.contact_emergency,
         mensaje: formData.message,
         curso: curso.nombre, // Guardamos el curso al que se inscribió
         fecha: new Date(),
       });
 
       alert("Inscripción enviada con éxito.");
-      setFormData({ name: "", email: "", message: "" }); // Resetear formulario
+      setFormData({ name: "", apellido: "",nacimiento:"",dni:"",telefono:"",direccion:"",localidad:"",contact_emergency:"", message: "" }); // Resetear formulario
     } catch (error) {
       console.error("Error al guardar en Firestore:", error);
       alert("Error al enviar la inscripción.");
@@ -67,8 +79,38 @@ function Form() {
           </label>
           <br />
           <label className="form-label">
-            Correo Electrónico:
-            <input type="email" name="email" className="form-input" value={formData.email} onChange={handleChange} required />
+            Apellido:
+            <input type="text" name="apellido" className="form-input" value={formData.apellido} onChange={handleChange} required />
+          </label>
+          <br />
+          <label className="form-label">
+            Fecha de Nacimiento:
+            <input type="text" name="nacimiento" className="form-input" value={formData.nacimiento} onChange={handleChange} required />
+          </label>
+          <br />
+          <label className="form-label">
+            DNI:
+            <input type="text" name="dni" className="form-input" value={formData.dni} onChange={handleChange} required />
+          </label>
+          <br />
+          <label className="form-label">
+            Teléfono:
+            <input type="text" name="telefono" className="form-input" value={formData.telefono} onChange={handleChange} required />
+          </label>
+          <br />
+          <label className="form-label">
+            Dirección:
+            <input type="text" name="direccion" className="form-input" value={formData.direccion} onChange={handleChange} required />
+          </label>
+          <br />
+          <label className="form-label">
+            Localidad:
+            <input type="text" name="localidad" className="form-input" value={formData.localidad} onChange={handleChange} required />
+          </label>
+          <br />
+          <label className="form-label">
+            Contacto de emergencia:
+            <input type="text" name="contact_emergency" className="form-input" value={formData.contact_emergency} onChange={handleChange} required />
           </label>
           <br />
           <label className="form-label">
