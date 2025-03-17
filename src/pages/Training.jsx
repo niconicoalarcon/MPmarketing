@@ -26,7 +26,7 @@ function Training() {
 
         <div className="card">
           <img src="/img_cursos/4.png" alt="Propuesta 4" />
-          <Link to="/form/4" className="button">Inscribirme</Link>
+          <Link to="/form/3" className="button button-prox">Proximamente</Link>
         </div>
       </section>
 

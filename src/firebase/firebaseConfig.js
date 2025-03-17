@@ -2,12 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_PROYECTO.firebaseapp.com",
-  projectId: "TU_PROYECTO",
-  storageBucket: "TU_PROYECTO.appspot.com",
-  messagingSenderId: "TU_MESSAGING_SENDER_ID",
-  appId: "TU_APP_ID",
+  apiKey: "AIzaSyBWxLQr39eh5MHa4xDfHCPIOqBLHS8VqIA",
+  authDomain: "mpmarketing-df84b.firebaseapp.com",
+  projectId: "mpmarketing-df84b",
+  storageBucket: "mpmarketing-df84b.firebasestorage.app",
+  messagingSenderId: "889911028393",
+  appId: "1:889911028393:web:7cb19e37c9cc98f4a197b8",
+  measurementId: "G-SD990VYQG4"
 };
 
 const app = initializeApp(firebaseConfig);

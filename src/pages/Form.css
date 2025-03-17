@@ -12,7 +12,7 @@ body{
   max-width: 600px;
   margin: 40px auto;
   padding: 30px;
-  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  background: #f2e9d0;
   border-radius: 12px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
   text-align: center;
@@ -34,16 +34,20 @@ body{
 
 /* Títulos */
 .form-title {
-  color: #2c3e50;
+  color: #a74949;
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
 .form-subtitle {
-  color: #00796b;
+  color: #16404e;
   font-size: 20px;
   margin-bottom: 15px;
+}
+.form-description{
+  color: #a74949;
+  margin-bottom: 20px;
 }
 
 /* Contenido del formulario */
@@ -57,7 +61,7 @@ body{
 /* Caja del formulario */
 .form-box {
   width: 100%;
-  background: #ffffff;
+  background: #a6cec6;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12);
@@ -68,7 +72,7 @@ body{
   font-weight: 600;
   text-align: left;
   display: block;
-  color: #2c3e50;
+  color: #ffffff;
   margin-bottom: 5px;
 }
 
@@ -86,10 +90,27 @@ body{
   box-shadow: 0px 0px 8px rgba(0, 121, 107, 0.4);
   outline: none;
 }
+.form-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #b2ebf2;
+  border-radius: 8px;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-textarea:focus {
+  border-color: #00796b;
+  box-shadow: 0 0 5px rgba(8, 85, 70, 0.5);
+}
+
 
 /* Botón de enviar */
 .form-button {
-  background: #00796b;
+  background: #556b2f;
   color: white;
   padding: 14px;
   border: none;
@@ -102,7 +123,7 @@ body{
 }
 
 .form-button:hover {
-  background: #004d40;
+  background: #a74949;
   transform: scale(1.05);
 }
 

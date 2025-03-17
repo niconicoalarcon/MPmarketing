@@ -15,9 +15,9 @@ function App() {
         <Navbar />
         <main className={styles.content}>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
+            {/*<Route path="/" element={<Home />} />*/}
+            {/*<Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />*/}
             <Route path="/training" element={<Training />} />
             <Route path="/form/:id" element={<Form />} />
           </Routes>

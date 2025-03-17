@@ -85,7 +85,7 @@ function Form() {
           <br />
           <label className="form-label">
             Fecha de Nacimiento:
-            <input type="text" name="nacimiento" className="form-input" value={formData.nacimiento} onChange={handleChange} required />
+            <input type="date" name="nacimiento" className="form-input" value={formData.nacimiento} onChange={handleChange} required />
           </label>
           <br />
           <label className="form-label">
@@ -115,7 +115,7 @@ function Form() {
           <br />
           <label className="form-label">
             Mensaje:
-            <textarea name="message" className="form-textarea" value={formData.message} onChange={handleChange} placeholder="¿Por qué quieres inscribirte?" required />
+            <textarea name="message" className="form-textarea" value={formData.message} onChange={handleChange} placeholder="Dejanos tus dudas o consultas" required />
           </label>
           <br />
           <button type="submit" className="form-button">Enviar</button>
@@ -123,7 +123,7 @@ function Form() {
 
         {/* Botón de pago de Mercado Pago */}
         <div className="payment-container">
-          <img src="../../public/assets/mp_logo.png" alt="mercado pago" />
+          <img src="/assets/mp_logo.png" alt="mercado pago" />
           <a href={curso.pago} target="_blank" rel="noopener noreferrer" className="payment-button">Pagar con Mercado Pago</a>
         </div>
       </div>

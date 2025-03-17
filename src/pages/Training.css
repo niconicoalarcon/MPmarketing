@@ -80,6 +80,18 @@ header h1 {
     margin-top: 20px;
     margin-bottom: 30px;
 }
+.button-prox {
+    background-color: #ccc; /* Gris claro */
+    color: #666; /* Texto gris oscuro */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: not-allowed; /* Cursor indicando que no es interactivo */
+    opacity: 0.6; /* Hace que se vea apagado */
+    pointer-events: none; /* Evita que se pueda hacer clic */
+  }
+  
 
 .card .button:hover {
     background-color: #a6cec6; /* Color verde suave al hacer hover */
