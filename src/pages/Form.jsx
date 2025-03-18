@@ -124,7 +124,7 @@ function Form() {
         {/* Botón de pago de Mercado Pago */}
         <div className="payment-container">
           <img src="/assets/mp_logo.png" alt="mercado pago" />
-          <a href={curso.pago} target="_blank" rel="noopener noreferrer" className="payment-button">Pagar con Mercado Pago</a>
+          <a href={curso.pago} target="_blank" rel="noopener noreferrer" className="payment-button">Pagar por Mercado Pago</a>
         </div>
       </div>
     </div>

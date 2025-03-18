@@ -5,7 +5,7 @@ import Services from "./pages/Services";
 import Training from "./pages/Training";
 import Form from "./pages/Form";  
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import styles from "./styles/App.module.css";
 
 function App() {
